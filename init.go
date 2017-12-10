@@ -17,7 +17,7 @@ var (
 
 func init() {
 	var err error
-	DB, err = sql.Open("mysql", username+":"+password+"@"+protocol+"("+address+":"+port+")/app")
+	DB, err = sql.Open("mysql", username+":"+password+"@"+protocol+"("+address+":"+port+")/app?parseTime=true")
 	if err != nil {
 		panic(err)
 	}
